@@ -1,14 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import { useCallback } from 'react';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Image, Pressable, Text, View } from 'react-native';
+import { StyleSheet, Image, Text, View } from 'react-native';
 
-import Button from './components/Button';
 import GetSooth from './components/GetSooth';
 import ImageViewer from './components/ImageViewer';
 
 const PlaceholderImage = require('./assets/salome.jpg');
 
+
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+	  caramel: require('./assets/RubikVinyl-Regular.ttf'),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  };
 
   return (
     <View style={styles.container}>
@@ -16,10 +32,9 @@ export default function App() {
 		<ImageViewer placeholderImageSource={PlaceholderImage} />
 	</View>
 	<View style={styles.footerContainer}>
-		<View>
+		<View style={styles.soothContainer}>
 			<GetSooth />
-			<Button label="A new sooth please." />
-		</View>
+	  	</View>
 	</View>
 	<StatusBar style="auto" />
     </View>
@@ -34,37 +49,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   footerContainer: {
-	flex: 1 / 2,
+	flex: 1,
 	alignItems: 'center',
 	},
   imageContainer: {
     flex: 1,
     paddingTop: 58,
   },
-  buttonContainer: {
+  soothContainer: {
     width: 320,
-    height: 68,
+    height: 250,
     marginHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 3,
-	borderWidth: 4,
-	borderColor: 'red',
-	borderRadius: 18,
   },
-  button: {
-    borderRadius: 10,
-    width: '100%',
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-	backgroundColor: 'white',
-  },
-  buttonLabel: {
-    color: 'red',
-    fontSize: 16,
-  },
-
-
 });
