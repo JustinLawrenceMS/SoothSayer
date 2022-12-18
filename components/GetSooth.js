@@ -23,9 +23,9 @@ export default function GetSooth() {
   }, []);
 
   return(
-	  <View style={{ flex: 1, padding: 24 }}>
+	  <View style={{ flex: 1}}>
 	      {isLoading ? <ActivityIndicator/> : (
-		    <Text>{data}</Text>
+		    <Text style={{ color: '#edeb56', fontSize: 26 }}>{data}</Text>
 		  )}
 	    </View>
 

@@ -17,9 +17,7 @@ export default function App() {
 	</View>
 	<View style={styles.footerContainer}>
 		<View>
-			<Text style={{ color: 'white', padding: 10 }}>
-				<GetSooth />
-			</Text>
+			<GetSooth />
 			<Button label="A new sooth please." />
 		</View>
 	</View>
@@ -36,7 +34,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   footerContainer: {
-	flex: 1 / 3,
+	flex: 1 / 2,
 	alignItems: 'center',
 	},
   imageContainer: {
