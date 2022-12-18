@@ -1,11 +1,29 @@
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Image, Pressable, Text, View } from 'react-native';
+
+import Button from './components/Button';
+import GetSooth from './components/GetSooth';
+import ImageViewer from './components/ImageViewer';
+
+const PlaceholderImage = require('./assets/salome.jpg');
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      	<View style={styles.imageContainer}>
+		<ImageViewer placeholderImageSource={PlaceholderImage} />
+	</View>
+	<View style={styles.footerContainer}>
+		<View>
+			<Text style={{ color: 'white', padding: 10 }}>
+				<GetSooth />
+			</Text>
+			<Button label="A new sooth please." />
+		</View>
+	</View>
+	<StatusBar style="auto" />
     </View>
   );
 }
@@ -13,8 +31,42 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  footerContainer: {
+	flex: 1 / 3,
+	alignItems: 'center',
+	},
+  imageContainer: {
+    flex: 1,
+    paddingTop: 58,
+  },
+  buttonContainer: {
+    width: 320,
+    height: 68,
+    marginHorizontal: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 3,
+	borderWidth: 4,
+	borderColor: 'red',
+	borderRadius: 18,
+  },
+  button: {
+    borderRadius: 10,
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+	backgroundColor: 'white',
+  },
+  buttonLabel: {
+    color: 'red',
+    fontSize: 16,
+  },
+
+
 });
