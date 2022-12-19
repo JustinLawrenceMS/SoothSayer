@@ -13,7 +13,7 @@ const PlaceholderImage = require('./assets/salome.jpg');
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-	  caramel: require('./assets/RubikVinyl-Regular.ttf'),
+	  caramel: require('./assets/Tangerine-Bold.ttf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -44,7 +44,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
