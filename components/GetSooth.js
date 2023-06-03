@@ -7,7 +7,7 @@ export default function GetSooth() {
 
   const getSooth = async () => {
      try {
-      const response = await fetch('https://gql.buttered.app/api/sooth/v1/fortune');
+      const response = await fetch('https://soothsayer-api.com/api/v1/fortune');
       const json = await response.json();
       setData(json);
 	Vibration.vibrate();
