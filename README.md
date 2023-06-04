@@ -9,7 +9,7 @@ Install dependencies with the following command:
 
 Then start expo by doing this:
 
-```npx expo```
+```npx expo start```
 
 Follow the instructions on the Expo site for how
 to load an Expo app.
