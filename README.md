@@ -5,7 +5,7 @@
 
 This app supplies a random passage from the public domain
 medieval poem, the Rubaiyyat, everytime the app is loaded.
-It was created with React, React Native, Nodejs, and Laravel.
+It was created with React, React Native, Expo, and Laravel.
 
 Download the github repo and navigate to app root.
 
