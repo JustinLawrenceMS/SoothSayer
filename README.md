@@ -1,5 +1,5 @@
 <h1>SoothSayer</h1>
-![image](https://github.com/JustinLawrenceMS/SoothSayer/assets/43936909/815fce0c-89e2-4a78-ba35-4929b94ea49a)
+<img src="![image](https://github.com/JustinLawrenceMS/SoothSayer/assets/43936909/815fce0c-89e2-4a78-ba35-4929b94ea49a)" alt="screenshot of the mobile app" />
 
 <h3>A fortune telling mobile app</h3>
 
