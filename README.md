@@ -12,9 +12,9 @@ the app work.
 
 Download the github repo and navigate to app root.
 
-```git clone https://github.com/JustinLawrenceMS/SoothSayer.git
+```git clone https://github.com/JustinLawrenceMS/SoothSayer.git```
 
-cd SoothSayer```
+```cd SoothSayer```
 
 Install dependencies with the following command:
 
