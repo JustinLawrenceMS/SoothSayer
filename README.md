@@ -12,6 +12,8 @@ the app work.
 
 Download the github repo and navigate to app root.
 
+```cd SoothSayer```
+
 Install dependencies with the following command:
 
 ```npm i```
