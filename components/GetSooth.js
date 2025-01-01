@@ -7,7 +7,7 @@ export default function GetSooth() {
 
   const getSooth = async () => {
      try {
-      const response = await fetch('https://soothsayer-api.com/api/v1/sooths/fortune');
+      const response = await fetch('https://fortune.at.chiclay.com/api/v1/sooths/fortune');
       const json = await response.json();
       setData(json);
 	Vibration.vibrate();
